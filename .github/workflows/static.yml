@@ -27,7 +27,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      #url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -51,7 +51,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - run: echo "🍏 This deployment's page_url is ${{ page_url }}."
+      - run: echo "🍏 This deployment's page_url is ${{ steps.deployment.outputs.page_url }}"
         # with:
         #  # branch: blog-pages
         #  folder: public
