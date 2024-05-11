@@ -1,7 +1,7 @@
 (require 'ox-publish)
 (require 'package)
 (let* (
-	   (file load-file-name)
+	   (file (or load-file-name (buffer-file-name)))
 	   (dir (file-name-directory (directory-file-name file)))
 	   (package-user-dir (concat dir ".packages"))
 	   (package-archives '(
@@ -24,8 +24,8 @@
 				 :author "zytbit"
 				 :email "zytbit@gmail.com"
 				 :with-email t
-				 :base-directory (file-name-concat dir "content")
-				 :publishing-directory (file-name-concat dir "public")
+				 :base-directory (concat dir "content")
+				 :publishing-directory (concat dir "public")
 				 :publishing-function 'org-html-publish-to-html)))
 		 org-html-validation-link
 		 org-html-head-include-default-style
