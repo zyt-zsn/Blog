@@ -51,7 +51,8 @@ jobs:
       #     path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: JamesIves/github-pages-deploy-action@v4.6.0
-        with:
-          # branch: blog-pages
-          folder: public
+        uses: actions/deploy-pages@v4
+      - run: echo "🍏 This deployment's page_url is ${{ steps.deployment.outputs.page_url }}."
+        # with:
+        #  # branch: blog-pages
+        #  folder: public
