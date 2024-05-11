@@ -37,8 +37,9 @@ jobs:
       - name: Install Emacs
         run: sudo apt install emacs-nox --yes
       - name: Build site
-        run: chmod +x build.sh
-        run: ./build.sh
+        run: 
+          chmod +x build.sh
+          ./build.sh
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v3
       #   with:
