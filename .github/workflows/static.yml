@@ -38,7 +38,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install Emacs
-        run: sudo apt install emacs-nox=29.3-3 --yes
+        run: sudo apt install emacs-nox=29.1 --yes
       - name: Make the script executable
         run: chmod +x build.sh
       - name: Build site
