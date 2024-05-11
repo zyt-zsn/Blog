@@ -1,8 +1,0 @@
-#+TITLE: ZYT's personal site
-* About me
-
-* [[file:config.org][Emacs Config]]
-
-# Local Variables:
-# coding: utf-8
-# End:
