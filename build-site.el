@@ -31,14 +31,16 @@
 		 org-html-head-include-default-style
 		 org-html-head-include-default-style
 		 (org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
-		 (httpd-root (file-name-concat dir "public"))
+		 (httpd-root (concat dir "public"))
 		 (httpd-port "8080")
 		 )
 	;; Generate the site output
 	(org-publish-all t)
-	;; (httpd-start)
-	;; ;; (browse-url--browser (concat "http://localhost:" httpd-port)) 
-	;; (eww-browse-url (concat "http://localhost:" httpd-port)) 
+	(unless load-file-name
+	  (httpd-start)
+	  ;; (browse-url--browser (concat "http://localhost:" httpd-port)) 
+	  (eww-browse-url (concat "http://localhost:" httpd-port)) 
+	  )
 	)
   )
 (message "Build complete!")
