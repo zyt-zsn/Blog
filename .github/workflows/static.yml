@@ -46,12 +46,12 @@ jobs:
           ./build.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-           path: '.'
+       # with:
+       #    path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - run: echo "🍏 This deployment's page_url is ${{ steps.deployment.outputs.page_url }}."
+      - run: echo "🍏 This deployment's page_url is ${{ page_url }}."
         # with:
         #  # branch: blog-pages
         #  folder: public
