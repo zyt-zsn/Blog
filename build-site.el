@@ -1,5 +1,4 @@
 (require 'ox-publish)
-(require 'simple-httpd)
 (require 'package)
 ;; Define the publishing project
 (let* (
@@ -27,6 +26,7 @@
   (unless package-archive-contents
 	(package-refresh-contents))
   (package-install 'htmlize)
+  (package-install 'simple-httpd)
   ;; Generate the site output
   (org-publish-all t)
   (httpd-start)
