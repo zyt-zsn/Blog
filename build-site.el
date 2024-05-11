@@ -1,5 +1,6 @@
 (require 'ox-publish)
 (require 'package)
+(require 'files)
 ;; Define the publishing project
 (let* (
 	   (file (buffer-file-name))
