@@ -38,7 +38,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install Emacs
-        run: sudo apt install emacs=29.2 --yes
+        run: sudo apt install emacs --yes
       - name: Make the script executable
         run: chmod +x build.sh
       - name: Build site
